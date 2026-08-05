@@ -1,215 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="encontrá un repositorio github al azar filtrando por lenguaje, estrellas, forks y actividad. sin filtros = repo completamente aleatorio." />
-  <meta name="robots" content="index,follow" />
-  <meta property="og:title" content="drift" />
-  <meta property="og:description" content="encontrá repos github aleatorios con filtros opcionales de lenguaje, estrellas, forks y actividad." />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="drift" />
-  <meta property="og:url" content="https://lflamonega.github.io/drift" />
-  <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'><rect width='1200' height='630' fill='%23111111'/><circle cx='150' cy='315' r='60' fill='%23ffffff'/><text x='260' y='345' fill='white' font-size='92' font-family='monospace' font-weight='700'>drift</text><text x='260' y='410' fill='%23aaaaaa' font-size='30' font-family='monospace'>repos github aleatorios, con filtros opcionales</text></svg>" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="drift" />
-  <meta name="twitter:description" content="encontrá repos github aleatorios con filtros opcionales de lenguaje, estrellas, forks y actividad." />
-  <link rel="canonical" href="https://lflamonega.github.io/drift" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23111111'/><circle cx='30' cy='30' r='9' fill='%23ffffff'/><circle cx='70' cy='30' r='9' fill='%23ffffff'/><circle cx='50' cy='50' r='9' fill='%23ffffff'/><circle cx='30' cy='70' r='9' fill='%23ffffff'/><circle cx='70' cy='70' r='9' fill='%23ffffff'/></svg>" />
-  <title>drift</title>
-  <style>
-    :root { color-scheme: light dark; }
-    * { box-sizing: border-box; }
-    body {
-      max-width: 34rem;
-      width: 92%;
-      margin: 1.5rem auto;
-      text-align: center;
-      line-height: 1.4;
-      font-size: 0.95rem;
-    }
-    form, #result-section { text-align: left; }
-    form > *, #result-section > * { margin-block: 0.7em; }
-    fieldset { padding: 0.8em; }
-    fieldset > legend { margin-block-end: 0.3em; }
-    .row { display: flex; flex-wrap: wrap; gap: 1em; }
-    .row > div { flex: 1 1 8em; margin-block: 0.3em; }
-    label { display: block; margin-block-end: 0.2em; }
-    input, select, button, summary { width: 100%; font-size: 1em; padding: 0.3em; }
-    button { padding: 0.5em; }
-    #card header { display: flex; align-items: center; gap: 0.6em; }
-    #card dl { display: flex; flex-wrap: wrap; gap: 0 1.2em; margin-block: 0.5em; }
-    #card dl > div { display: flex; gap: 0.3em; }
-    #card dt { font-weight: bold; }
-    #card kbd { margin-inline-end: 0.4em; }
-    img { max-width: 100%; height: auto; }
-    [hidden] { display: none; }
-  </style>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "drift",
-      "url": "https://lflamonega.github.io/drift",
-      "description": "encontrá un repositorio github al azar filtrando por lenguaje, estrellas, forks y actividad.",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "Web",
-      "inLanguage": "es"
-    }
-  </script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="encontrá un repositorio github al azar filtrando por lenguaje, estrellas, forks y actividad. sin filtros = repo completamente aleatorio."/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:title" content="drift"/>
+<meta property="og:description" content="encontrá repos github aleatorios con filtros opcionales de lenguaje, estrellas, forks y actividad."/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="drift"/>
+<meta property="og:url" content="https://lflamonega.github.io/drift"/>
+<meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'><rect width='1200' height='630' fill='%23111111'/><circle cx='150' cy='315' r='60' fill='%23ffffff'/><text x='260' y='345' fill='white' font-size='92' font-family='monospace' font-weight='700'>drift</text><text x='260' y='410' fill='%23aaaaaa' font-size='30' font-family='monospace'>repos github aleatorios, con filtros opcionales</text></svg>"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="drift"/>
+<meta name="twitter:description" content="encontrá repos github aleatorios con filtros opcionales de lenguaje, estrellas, forks y actividad."/>
+<link rel="canonical" href="https://lflamonega.github.io/drift"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23111111'/><circle cx='30' cy='30' r='9' fill='%23ffffff'/><circle cx='70' cy='30' r='9' fill='%23ffffff'/><circle cx='50' cy='50' r='9' fill='%23ffffff'/><circle cx='30' cy='70' r='9' fill='%23ffffff'/><circle cx='70' cy='70' r='9' fill='%23ffffff'/></svg>"/>
+<title>drift</title>
+<style>
+:root{color-scheme:light dark}*{box-sizing:border-box}body{max-width:34rem;width:92%;margin:1.5rem auto;text-align:center;line-height:1.4;font-size:.95rem}form,#result-section{text-align:left}form>*,#result-section>*{margin-block:.7em}fieldset{padding:.8em}fieldset>legend{margin-block-end:.3em}.row{display:flex;flex-wrap:wrap;gap:1em}.row>div{flex:1 1 8em;margin-block:.3em}label{display:block;margin-block-end:.2em}input,select,button,summary{width:100%;font-size:1em;padding:.3em}button{padding:.5em}#card header{display:flex;align-items:center;gap:.6em}#card dl{display:flex;flex-wrap:wrap;gap:0 1.2em;margin-block:.5em}#card dl>div{display:flex;gap:.3em}#card dt{font-weight:bold}#card kbd{margin-inline-end:.4em}#card .tags{display:flex;flex-wrap:wrap;gap:.3em;margin-block:.5em}#card .tags kbd{margin:0}img{max-width:100%;height:auto}[hidden]{display:none}#card{transition:opacity .2s}#result-count{font-size:.8em;color:#888;margin-block-start:.3em}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"drift","url":"https://lflamonega.github.io/drift","description":"encontrá un repositorio github al azar filtrando por lenguaje, estrellas, forks y actividad.","applicationCategory":"DeveloperApplication","operatingSystem":"Web","inLanguage":"es"}</script>
 </head>
 <body>
-  <main>
-    <section id="search-section" aria-label="filtros de búsqueda">
-      <form id="search-form" novalidate>
-        <label for="lang">lenguaje</label>
-        <input type="text" id="lang" placeholder="ej: python, rust, go" autocomplete="off" spellcheck="false" />
-
-        <fieldset>
-          <legend>estrellas</legend>
-          <div class="row">
-            <div><label for="smin">mínimo</label><input type="number" id="smin" min="0" placeholder="0" /></div>
-            <div><label for="smax">máximo</label><input type="number" id="smax" min="0" placeholder="sin límite" /></div>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>forks</legend>
-          <div class="row">
-            <div><label for="fmin">mínimo</label><input type="number" id="fmin" min="0" placeholder="0" /></div>
-            <div><label for="fmax">máximo</label><input type="number" id="fmax" min="0" placeholder="sin límite" /></div>
-          </div>
-        </fieldset>
-
-        <label for="activity">último push</label>
-        <select id="activity">
-          <option value="">cualquiera</option>
-          <option value="30">últimos 30 días</option>
-          <option value="90">últimos 90 días</option>
-          <option value="365">último año</option>
-        </select>
-
-        <details>
-          <summary>token de github (opcional)</summary>
-          <input type="password" id="pat" placeholder="ghp_..." autocomplete="off" style="margin-block-start: 0.6em;" />
-        </details>
-
-        <button type="submit" id="btn">buscar repo</button>
-      </form>
-      <p id="error" role="alert" hidden></p>
-    </section>
-
-    <section id="result-section" aria-live="polite" aria-label="resultado" hidden>
-      <button type="button" id="reset-btn">buscar otro repo</button>
-      <article id="card"></article>
-    </section>
-
-    <noscript><p>este sitio necesita javascript para buscar repositorios en github.</p></noscript>
-  </main>
-
-  <script>
-    const $ = id => document.getElementById(id);
-
-    $('search-form').addEventListener('submit', async e => {
-      e.preventDefault();
-
-      const lang     = $('lang').value.trim();
-      const smin     = $('smin').value;
-      const smax     = $('smax').value;
-      const fmin     = $('fmin').value;
-      const fmax     = $('fmax').value;
-      const activity = $('activity').value;
-      const pat      = $('pat').value.trim();
-
-      const parts = [];
-      if (lang)         parts.push(`language:${lang}`);
-      if (smin && smax) parts.push(`stars:${smin}..${smax}`);
-      else if (smin)    parts.push(`stars:>=${smin}`);
-      else if (smax)    parts.push(`stars:<=${smax}`);
-      if (fmin && fmax) parts.push(`forks:${fmin}..${fmax}`);
-      else if (fmin)    parts.push(`forks:>=${fmin}`);
-      else if (fmax)    parts.push(`forks:<=${fmax}`);
-      if (activity) {
-        const d = new Date();
-        d.setDate(d.getDate() - +activity);
-        parts.push(`pushed:>${d.toISOString().slice(0, 10)}`);
-      }
-      const query = parts.length ? parts.join(' ') : 'stars:>=0';
-
-      const headers = {
-        'Accept': 'application/vnd.github+json',
-        'X-GitHub-Api-Version': '2022-11-28',
-        ...(pat && { 'Authorization': `Bearer ${pat}` }),
-      };
-
-      $('btn').disabled = true;
-      $('btn').textContent = 'buscando…';
-      $('error').hidden = true;
-
-      try {
-        const r1 = await fetch(
-          `https://api.github.com/search/repositories?q=${encodeURIComponent(query)}&per_page=1`,
-          { headers }
-        );
-        const d1 = await r1.json();
-        if (!r1.ok)          throw new Error(d1.message ?? `error ${r1.status}`);
-        if (!d1.total_count) throw new Error('sin resultados. probá relajando los filtros.');
-
-        const page = Math.floor(Math.random() * Math.min(d1.total_count, 1000)) + 1;
-        const r2 = await fetch(
-          `https://api.github.com/search/repositories?q=${encodeURIComponent(query)}&per_page=1&page=${page}`,
-          { headers }
-        );
-        const d2 = await r2.json();
-        if (!r2.ok)       throw new Error(d2.message ?? `error ${r2.status}`);
-        if (!d2.items[0]) throw new Error('respuesta vacía. intentá de nuevo.');
-
-        render(d2.items[0]);
-        $('search-section').hidden = true;
-        $('result-section').hidden = false;
-
-      } catch (err) {
-        $('error').textContent = err.message;
-        $('error').hidden = false;
-      } finally {
-        $('btn').disabled = false;
-        $('btn').textContent = 'buscar repo';
-      }
-    });
-
-    $('reset-btn').addEventListener('click', () => {
-      $('result-section').hidden = true;
-      $('search-section').hidden = false;
-    });
-
-    function render(r) {
-      const fmt  = n => n >= 1000 ? (n / 1000).toFixed(1) + 'k' : n;
-      const date = s => new Date(s).toLocaleDateString('es-AR', { year: 'numeric', month: 'short', day: 'numeric' });
-      const esc  = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-      $('card').innerHTML = `
-        <header>
-          <img src="${r.owner.avatar_url}${r.owner.avatar_url.includes('?') ? '&' : '?'}s=40" width="40" height="40" alt="" />
-          <a href="${r.html_url}" target="_blank" rel="noopener noreferrer"><strong>${esc(r.full_name).toLowerCase()}</strong></a>
-          ${r.fork ? ' <em>(fork)</em>' : ''}${r.archived ? ' <em>(archivado)</em>' : ''}
-        </header>
-        <p>${r.description ? esc(r.description) : '<em>sin descripción</em>'}</p>
-        <dl>
-          ${r.language ? `<div><dt>lenguaje</dt><dd>${esc(r.language).toLowerCase()}</dd></div>` : ''}
-          <div><dt>estrellas</dt><dd>${fmt(r.stargazers_count)}</dd></div>
-          <div><dt>forks</dt><dd>${fmt(r.forks_count)}</dd></div>
-          <div><dt>watchers</dt><dd>${fmt(r.watchers_count)}</dd></div>
-          ${r.open_issues_count ? `<div><dt>issues</dt><dd>${fmt(r.open_issues_count)}</dd></div>` : ''}
-        </dl>
-        ${r.topics?.length ? `<p><strong>tags</strong><br>${r.topics.map(t => `<kbd>${esc(t).toLowerCase()}</kbd>`).join('')}</p>` : ''}
-        <dl>
-          <div><dt>creado</dt><dd>${date(r.created_at)}</dd></div>
-          <div><dt>actualizado</dt><dd>${date(r.pushed_at)}</dd></div>
-          ${r.license ? `<div><dt>licencia</dt><dd>${esc(r.license.name).toLowerCase()}</dd></div>` : ''}
-        </dl>
-        ${r.homepage ? `<p><a href="${esc(r.homepage)}" target="_blank" rel="noopener noreferrer">sitio web</a></p>` : ''}
-      `;
-    }
-  </script>
+<main>
+<section id="search-section" aria-label="filtros de búsqueda">
+<form id="search-form" novalidate>
+<label for="lang">lenguaje</label>
+<input type="text" id="lang" placeholder="ej: python, rust, go" autocomplete="off" spellcheck="false"/>
+<label for="tags">tags</label>
+<div style="display:flex;gap:.4em"><input type="text" id="tags" placeholder="ej: machine-learning, web" autocomplete="off" spellcheck="false" list="tags-list" style="flex:1"/><button type="button" id="random-tag-btn" title="tag aleatoria" style="width:auto;padding:.3em .6em">🎲</button></div>
+<datalist id="tags-list"></datalist>
+<fieldset><legend>estrellas</legend><div class="row"><div><label for="smin">mínimo</label><input type="number" id="smin" min="0" placeholder="0"/></div><div><label for="smax">máximo</label><input type="number" id="smax" min="0" placeholder="sin límite"/></div></div></fieldset>
+<fieldset><legend>forks</legend><div class="row"><div><label for="fmin">mínimo</label><input type="number" id="fmin" min="0" placeholder="0"/></div><div><label for="fmax">máximo</label><input type="number" id="fmax" min="0" placeholder="sin límite"/></div></div></fieldset>
+<label for="activity">último push</label>
+<select id="activity"><option value="">cualquiera</option><option value="30">últimos 30 días</option><option value="90">últimos 90 días</option><option value="365">último año</option></select>
+<details><summary>token de github (opcional)</summary><input type="password" id="pat" placeholder="ghp_..." autocomplete="off" style="margin-block-start:.6em"/></details>
+<button type="submit" id="btn">buscar repo</button>
+<p id="rate-limit-info" hidden></p>
+</form>
+<p id="error" role="alert" hidden></p>
+</section>
+<section id="result-section" aria-live="polite" aria-label="resultado" hidden>
+<button type="button" id="reset-btn">buscar otro repo</button>
+<p id="result-count"></p>
+<article id="card"></article>
+</section>
+<noscript><p>este sitio necesita javascript para buscar repositorios en github.</p></noscript>
+</main>
+<script>
+const $=id=>document.getElementById(id);const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');const safeUrl=u=>/^https?:\/\//i.test(u)?esc(u):'';const FIELDS=['lang','tags','smin','smax','fmin','fmax','activity'];let TOPICS=[];const POOL=100,COOLDOWN=3000;let pool=[],poolQ='',lastT=0,cTimer=null,lastQuery='',lastAuth='',totalCount=0;
+let seen=JSON.parse(localStorage.getItem('drift_seen')||'[]');function saveSeen(){while(seen.length>500)seen.shift();localStorage.setItem('drift_seen',JSON.stringify(seen))}
+$('random-tag-btn').addEventListener('click',()=>{if(TOPICS.length)$('tags').value=TOPICS[Math.floor(Math.random()*TOPICS.length)]});
+async function loadTopics(){try{const r=await fetch('https://api.github.com/search/repositories?q=stars:>1000&per_page=100&page=1',{headers:{'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}});if(!r.ok)return;const d=await r.json();const counts={};(d.items||[]).forEach(repo=>(repo.topics||[]).forEach(t=>{counts[t]=(counts[t]||0)+1}));TOPICS=Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,40).map(([t])=>t);TOPICS.forEach(t=>{const o=document.createElement('option');o.value=t;$('tags-list').appendChild(o)})}catch(e){}}
+function vals(){return Object.fromEntries(FIELDS.map(f=>[f,$(f).value.trim()]))}function restoreURL(){const p=new URLSearchParams(location.search);FIELDS.forEach(f=>{if(p.has(f))$(f).value=p.get(f)})}function pushURL(){const p=new URLSearchParams();const v=vals();FIELDS.forEach(f=>{if(v[f])p.set(f,v[f])});const q=p.toString();history.pushState({},'',q?`${location.pathname}?${q}`:location.pathname)}function restoreToken(){const t=localStorage.getItem('drift_token');if(t)$('pat').value=t}function saveToken(){const v=$('pat').value.trim();v?localStorage.setItem('drift_token',v):localStorage.removeItem('drift_token')}
+function buildQuery(){const v=vals();if(v.smin&&v.smax&&+v.smin>+v.smax)throw new Error('el mínimo de estrellas no puede ser mayor al máximo.');if(v.fmin&&v.fmax&&+v.fmin>+v.fmax)throw new Error('el mínimo de forks no puede ser mayor al máximo.');const p=[];if(v.lang)p.push(`language:${v.lang}`);if(v.tags)v.tags.split(/[\s,]+/).filter(Boolean).forEach(t=>p.push(`topic:${t}`));if(v.smin&&v.smax)p.push(`stars:${v.smin}..${v.smax}`);else if(v.smin)p.push(`stars:>=${v.smin}`);else if(v.smax)p.push(`stars:<=${v.smax}`);if(v.fmin&&v.fmax)p.push(`forks:${v.fmin}..${v.fmax}`);else if(v.fmin)p.push(`forks:>=${v.fmin}`);else if(v.fmax)p.push(`forks:<=${v.fmax}`);if(v.activity){const d=new Date();d.setDate(d.getDate()-+v.activity);p.push(`pushed:>${d.toISOString().slice(0,10)}`)}return p.join(' ')}
+function buildHeaders(){const t=$('pat').value.trim();return{'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28',...(t&&{Authorization:`Bearer ${t}`})}}
+function updateRL(h){const r=h.get('x-ratelimit-remaining');if(r!==null){$('rate-limit-info').textContent=`búsquedas restantes este minuto: ${r}`;$('rate-limit-info').hidden=false}}
+function startCooldown(s){clearInterval(cTimer);let rem=s;$('btn').disabled=true;$('btn').textContent=`esperá ${rem}s…`;$('rate-limit-info').hidden=false;$('rate-limit-info').textContent=`rate limit — esperá ${rem}s`;cTimer=setInterval(()=>{rem--;if(rem<=0){clearInterval(cTimer);$('btn').disabled=false;$('btn').textContent='buscar otro repo';$('rate-limit-info').hidden=true}else $('rate-limit-info').textContent=`rate limit — esperá ${rem}s`},1000)}
+async function fetchPool(q,h){const pg=Math.floor(Math.random()*10)+1;const r=await fetch(`https://api.github.com/search/repositories?q=${encodeURIComponent(q)}&per_page=${POOL}&page=${pg}`,{headers:h});updateRL(r.headers);if(r.status===403){const w=r.headers.get('retry-after');const sec=w?Math.ceil(+w):60;startCooldown(sec);throw new Error(`secondary rate limit — esperá ${sec} segundos.`)}const d=await r.json();if(!r.ok)throw new Error(d.message??`error ${r.status}`);totalCount=d.total_count||0;return(d.items||[]).filter(repo=>!seen.includes(repo.id))}
+async function pickRandom(q,h){const k=q+(h.Authorization||'');if(!pool.length||poolQ!==k){pool=await fetchPool(q,h);poolQ=k;if(!pool.length)throw new Error('sin resultados. probá relajando los filtros.')}const i=Math.floor(Math.random()*pool.length);const repo=pool[i];pool.splice(i,1);seen.push(repo.id);saveSeen();return repo}
+function checkCooldown(){const now=Date.now();if(now-lastT<COOLDOWN&&lastT>0){$('error').textContent=`esperá ${Math.ceil((COOLDOWN-now+lastT)/1000)} segundos antes de buscar de nuevo.`;$('error').hidden=false;return true}return false}
+$('search-form').addEventListener('submit',async e=>{e.preventDefault();if(checkCooldown())return;saveToken();let q;try{q=buildQuery()}catch(err){$('error').textContent=err.message;$('error').hidden=false;return}pushURL();const h=buildHeaders();lastQuery=q;lastAuth=h.Authorization||'';$('btn').disabled=true;$('btn').textContent='buscando…';$('error').hidden=true;try{$('card').style.opacity=0;$('card').innerHTML='<p style="font-style:italic;color:#888">buscando repos…</p>';$('result-section').hidden=false;$('search-section').hidden=true;const repo=await pickRandom(q,h);render(repo);lastT=Date.now();$('result-count').textContent=totalCount?`${totalCount.toLocaleString('es-AR')} repos encontrados`:'';requestAnimationFrame(()=>{$('card').style.opacity=1});$('card').querySelector('a')?.focus()}catch(err){$('error').textContent=err.message;$('error').hidden=false;$('search-section').hidden=false;$('result-section').hidden=true}finally{if($('btn').disabled&&!cTimer){$('btn').disabled=false;$('btn').textContent=pool.length?'buscar otro repo':'buscar repo'}}});
+$('reset-btn').addEventListener('click',async()=>{clearInterval(cTimer);if(checkCooldown())return;if(pool.length||lastQuery){$('btn').disabled=true;$('btn').textContent='buscando…';$('error').hidden=true;try{const h={'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28',...(lastAuth&&{Authorization:lastAuth})};$('card').style.opacity=0;const repo=await pickRandom(lastQuery,h);render(repo);lastT=Date.now();requestAnimationFrame(()=>{$('card').style.opacity=1});$('card').querySelector('a')?.focus()}catch(err){$('error').textContent=err.message;$('error').hidden=false}finally{$('btn').disabled=false;$('btn').textContent=pool.length?'buscar otro repo':'buscar repo'}}else{$('result-section').hidden=true;$('search-section').hidden=false;$('lang').focus()}});
+document.addEventListener('keydown',e=>{if(e.code==='Space'&&!['INPUT','SELECT','TEXTAREA','BUTTON'].includes(e.target.tagName)){$('reset-btn').click();e.preventDefault()}});
+window.addEventListener('popstate',restoreURL);
+function render(r){const fmt=n=>n>=1000?(n/1000).toFixed(1)+'k':n;const dt=s=>new Date(s).toLocaleDateString('es-AR',{year:'numeric',month:'short',day:'numeric'});const av=r.owner.avatar_url;const sav=/^https?:\/\//i.test(av)?av+(av.includes('?')?'&':'?')+'s=40':'';$('card').innerHTML=`<header>${sav?`<img src="${esc(sav)}" width="40" height="40" alt=""/>`:''}<a href="${esc(r.html_url)}" target="_blank" rel="noopener noreferrer"><strong>${esc(r.full_name).toLowerCase()}</strong></a>${r.fork?' <em>(fork)</em>':''}${r.archived?' <em>(archivado)</em>':''}</header><p>${r.description?esc(r.description):'<em>sin descripción</em>'}</p><dl>${r.language?`<div><dt>lenguaje</dt><dd>${esc(r.language).toLowerCase()}</dd></div>`:''}<div><dt>estrellas</dt><dd>${fmt(r.stargazers_count)}</dd></div><div><dt>forks</dt><dd>${fmt(r.forks_count)}</dd></div>${r.open_issues_count?`<div><dt>issues</dt><dd>${fmt(r.open_issues_count)}</dd></div>`:''}</dl>${r.topics?.length?`<div class="tags"><strong>tags</strong><br>${r.topics.map(t=>`<kbd>${esc(t).toLowerCase()}</kbd>`).join('')}</div>`:''}<dl><div><dt>creado</dt><dd>${dt(r.created_at)}</dd></div><div><dt>actualizado</dt><dd>${dt(r.pushed_at)}</dd></div>${r.license?`<div><dt>licencia</dt><dd>${esc(r.license.name).toLowerCase()}</dd></div>`:''}</dl>${r.homepage?`<p><a href="${safeUrl(r.homepage)}" target="_blank" rel="noopener noreferrer">sitio web</a></p>`:''}`}
+restoreURL();restoreToken();loadTopics();
+</script>
 </body>
 </html>
